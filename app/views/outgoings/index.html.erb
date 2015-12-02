@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Outgoings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>Date</th>
+      <th>Sum</th>
+      <th>Category</th>
+      <th>Pocket</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @outgoings.each do |outgoing| %>
+      <tr>
+        <td><%= outgoing.note %></td>
+        <td><%= outgoing.date %></td>
+        <td><%= outgoing.sum %></td>
+        <td><%= outgoing.category.name %></td>
+        <td><%= outgoing.pocket.name %></td>
+        <td><%= outgoing.user.name %></td>
+        <td><%= link_to 'Show', outgoing %></td>
+        <td><%= link_to 'Edit', edit_outgoing_path(outgoing) %></td>
+        <td><%= link_to 'Destroy', outgoing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Outgoing', new_outgoing_path %>

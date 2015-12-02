@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show User</h1>
+<p>
+  <strong>ID:</strong>
+  <%= @user.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+<p>
+<strong>Pockets:</strong>
+  <ul>
+    <% @user.pockets.each do |pocket| %>
+        <li><%= link_to pocket.name, pocket_path(pocket.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Categories:</strong>
+  <ul>
+    <% @user.categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Incomes:</strong>
+  <ul>
+    <% @user.incomes.each do |income| %>
+        <li><%= link_to income.note, income_path(income.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Outgoings:</strong>
+  <ul>
+    <% @user.outgoings.each do |outgoing| %>
+        <li><%= link_to outgoing.note, outgoing_path(outgoing.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Calendars:</strong>
+  <ul>
+    <% @user.calendars.each do |calendar| %>
+        <li><%= link_to calendar.period, calendar_path(calendar.id) %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

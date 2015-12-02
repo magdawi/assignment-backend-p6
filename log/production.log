@@ -1,0 +1,108 @@
+I, [2015-11-27T09:06:00.152611 #26060]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:06:00 +0100
+I, [2015-11-27T09:06:00.165330 #26060]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:06:00.175324 #26060] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+E, [2015-11-27T09:06:00.175404 #26060] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:06:00.175811 #26060]  INFO -- :   Rendered users/index.html.erb within layouts/application (1.9ms)
+I, [2015-11-27T09:06:00.175951 #26060]  INFO -- : Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+F, [2015-11-27T09:06:00.177467 #26060] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb___233252320889609359_70087365335340'
+
+
+I, [2015-11-27T09:07:02.301479 #26060]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:07:02 +0100
+I, [2015-11-27T09:07:02.303327 #26060]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:07:02.305569 #26060] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+E, [2015-11-27T09:07:02.305665 #26060] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:07:02.306295 #26060]  INFO -- :   Rendered users/index.html.erb within layouts/application (1.4ms)
+I, [2015-11-27T09:07:02.307130 #26060]  INFO -- : Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+F, [2015-11-27T09:07:02.309932 #26060] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb___233252320889609359_70087365335340'
+
+
+I, [2015-11-27T09:07:03.548381 #26060]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:07:03 +0100
+I, [2015-11-27T09:07:03.550007 #26060]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:07:03.552894 #26060] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+E, [2015-11-27T09:07:03.552996 #26060] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:07:03.554095 #26060]  INFO -- :   Rendered users/index.html.erb within layouts/application (1.7ms)
+I, [2015-11-27T09:07:03.554336 #26060]  INFO -- : Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+F, [2015-11-27T09:07:03.556687 #26060] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb___233252320889609359_70087365335340'
+
+
+I, [2015-11-27T09:07:04.266220 #26060]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:07:04 +0100
+I, [2015-11-27T09:07:04.267473 #26060]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:07:04.269521 #26060] DEBUG -- :   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+E, [2015-11-27T09:07:04.269614 #26060] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:07:04.270260 #26060]  INFO -- :   Rendered users/index.html.erb within layouts/application (1.8ms)
+I, [2015-11-27T09:07:04.270495 #26060]  INFO -- : Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+F, [2015-11-27T09:07:04.272816 #26060] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb___233252320889609359_70087365335340'
+
+
+I, [2015-11-27T09:10:06.235425 #12655]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:10:06 +0100
+I, [2015-11-27T09:10:06.249781 #12655]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:10:06.261354 #12655] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+E, [2015-11-27T09:10:06.261455 #12655] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:10:06.261978 #12655]  INFO -- :   Rendered users/index.html.erb within layouts/application (2.3ms)
+I, [2015-11-27T09:10:06.262159 #12655]  INFO -- : Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+F, [2015-11-27T09:10:06.263591 #12655] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb__3538395372725241546_69927969670240'
+
+
+I, [2015-11-27T09:10:07.603488 #12655]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-11-27 09:10:07 +0100
+I, [2015-11-27T09:10:07.604848 #12655]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-11-27T09:10:07.607427 #12655] DEBUG -- :   [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+E, [2015-11-27T09:10:07.607527 #12655] ERROR -- : SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+I, [2015-11-27T09:10:07.608229 #12655]  INFO -- :   Rendered users/index.html.erb within layouts/application (1.7ms)
+I, [2015-11-27T09:10:07.608476 #12655]  INFO -- : Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+F, [2015-11-27T09:10:07.612107 #12655] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @users.each do |user| %>
+    15:       <tr>
+    16:         <td><%= user.name %></td>
+    17:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb__3538395372725241546_69927969670240'
+
+

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show Calendar</h1>
+<p>
+  <strong>ID:</strong>
+  <%= @calendar.id %>
+</p>
+<p>
+  <strong>Period:</strong>
+  <%= @calendar.period %>
+</p>
+
+<p>
+  <strong>Sum income:</strong>
+  <%= @calendar.sum_income %> €
+</p>
+
+<p>
+  <strong>Sum outgoing:</strong>
+  <%= @calendar.sum_outgoing %> €
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @calendar.balance %> €
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= link_to @calendar.pocket.name, pocket_path(@calendar.pocket.id) %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= link_to @calendar.user.name, user_path(@calendar.user.id) %>
+</p>
+
+<%= link_to 'Edit', edit_calendar_path(@calendar) %> |
+<%= link_to 'Back', calendars_path %>

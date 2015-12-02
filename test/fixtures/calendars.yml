@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period: 2015-11-17
+  sum_income: 9.99
+  sum_outgoing: 9.99
+  balance: 9.99
+  pocket_id: 
+  user_id: 
+
+two:
+  period: 2015-11-17
+  sum_income: 9.99
+  sum_outgoing: 9.99
+  balance: 9.99
+  pocket_id: 
+  user_id: 

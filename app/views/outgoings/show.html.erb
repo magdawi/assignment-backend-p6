@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show Outgoing</h1>
+<p>
+  <strong>ID:</strong>
+  <%= @outgoing.id %>
+</p>
+<p>
+  <strong>Note:</strong>
+  <%= @outgoing.note %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @outgoing.date %>
+</p>
+
+<p>
+  <strong>Sum:</strong>
+  <%= @outgoing.sum %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= link_to @outgoing.category.name, category_path(@outgoing.category.id) %>
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= link_to @outgoing.pocket.name, pocket_path(@outgoing.pocket.id) %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= link_to @outgoing.user.name, user_path(@outgoing.user.id) %>
+</p>
+
+<%= link_to 'Edit', edit_outgoing_path(@outgoing) %> |
+<%= link_to 'Back', outgoings_path %>

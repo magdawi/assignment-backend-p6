@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  note: MyString
+  date: 2015-11-17
+  sum: 9.99
+  category_id: 
+  pocket_id: 
+  user_id: 
+
+two:
+  note: MyString
+  date: 2015-11-17
+  sum: 9.99
+  category_id: 
+  pocket_id: 
+  user_id: 

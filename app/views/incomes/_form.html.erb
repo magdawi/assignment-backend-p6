@@ -1,0 +1,48 @@
+<%= form_for(@income) do |f| %>
+  <% if @income.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@income.errors.count, "error") %> prohibited this income from being saved:</h2>
+
+      <ul>
+      <% @income.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :sum %><br>
+    <%= f.text_field :sum %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.select(:user_id) do %>
+    <%= options_from_collection_for_select(User.all, :id, :name) %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.select(:pocket_id) do %>
+    <%= options_from_collection_for_select(Pocket.all, :id, :name) %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.select(:category_id) do %>
+    <%= options_from_collection_for_select(Category.order(:way).all, :id, :name) %>
+    <% end %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

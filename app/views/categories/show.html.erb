@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show Category</h1>
+
+<p>
+  <strong>ID:</strong>
+  <%= @category.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+<p>
+  <strong>Way:</strong>
+  <%= @category.way %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= link_to @category.user.name, user_path(@category.user.id) %>
+</p>
+<% if(@category.way == false) %>
+	<p>
+	<strong>Incomes:</strong>
+	  <ul>
+	    <% @category.incomes.each do |income| %>
+	        <li><%= link_to income.note, income_path(income.id) %></li>
+	    <% end %>
+	  </ul>
+	</p>
+<% end %> 
+<% if(@category.way == true) %>
+	<p>
+	<strong>Outgoings:</strong>
+	  <ul>
+	    <% @category.outgoings.each do |outgoing| %>
+	        <li><%= link_to outgoing.note, outgoing_path(outgoing.id) %></li>
+	    <% end %>
+	  </ul>
+	</p>
+<% end %> 
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

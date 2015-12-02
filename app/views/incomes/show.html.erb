@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show Income</h1>
+<p>
+  <strong>ID:</strong>
+  <%= @income.id %>
+</p>
+<p>
+  <strong>Note:</strong>
+  <%= @income.note %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @income.date %>
+</p>
+
+<p>
+  <strong>Sum:</strong>
+  <%= @income.sum %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= link_to @income.category.name, category_path(@income.category.id) %>
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= link_to @income.pocket.name, pocket_path(@income.pocket.id) %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= link_to @income.user.name, user_path(@income.user.id) %>
+</p>
+
+<%= link_to 'Edit', edit_income_path(@income) %> |
+<%= link_to 'Back', incomes_path %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show Pocket</h1>
+<p>
+  <strong>ID:</strong>
+  <%= @pocket.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @pocket.name %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= link_to @pocket.user.name, user_path(@pocket.user.id) %>
+</p>
+<p>
+<strong>Incomes:</strong>
+  <ul>
+    <% @pocket.incomes.each do |income| %>
+        <li><%= link_to income.note, income_path(income.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Outgoings:</strong>
+  <ul>
+    <% @pocket.outgoings.each do |outgoing| %>
+        <li><%= link_to outgoing.note, outgoing_path(outgoing.id) %></li>
+    <% end %>
+  </ul>
+</p>
+<p>
+<strong>Calendars:</strong>
+  <ul>
+    <% @pocket.calendars.each do |calendar| %>
+        <li><%= link_to calendar.period, calendar_path(calendar.id) %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_pocket_path(@pocket) %> |
+<%= link_to 'Back', pockets_path %>
